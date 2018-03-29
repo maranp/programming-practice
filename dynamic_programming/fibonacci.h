@@ -5,11 +5,8 @@
  *      Author: maran
  */
 
-#ifndef DYNAMIC_PROGRAMMING_FIBONACCI_H_
-#define DYNAMIC_PROGRAMMING_FIBONACCI_H_
+#pragma once
 
 long fibonacci(long);
-
-
-
-#endif /* DYNAMIC_PROGRAMMING_FIBONACCI_H_ */
+long fib_cache(long);
+long fib_o_n(long);

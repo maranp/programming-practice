@@ -8,6 +8,6 @@
 #include <fibonacci.h>
 
 int main() {
-	return (int) fibonacci(5);
+	return (int) fib_o_n(7);
 }
 
