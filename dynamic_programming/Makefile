@@ -1,16 +1,19 @@
 CXX := clang++
-CXXINCFLAGS := -std=c++17 -I . -I /home/maran/eclipse/boost_1_62_0 #-Werror=narrowing #-O3
+CXXINCFLAGS := -std=c++1z -I /home/maran/eclipse/boost_1_62_0 #-Werror=narrowing #-O3
 CXXFLAGS := -Wall -g $(CXXINCFLAGS) -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG
 #CXXDEFS := -DDEBUG
-#LDFLAGS := -lpthread
+LDFLAGS := -lpthread
+SRC := $(wildcard *.cpp)
+TARGET := $(SRC:%.cpp=bin/%)
 
-all: bin bin/fibonacci
+all: | bin $(TARGET)
 
-bin/fibonacci : main.cpp fibonacci.cpp
-	$(CXX) $(CXXFLAGS) $(CXXDEFS) main.cpp fibonacci.cpp -o bin/fibonacci $(LDFLAGS)
+bin/% : %.cpp
+	$(CXX) $(CXXFLAGS) $(CXXDEFS) $< -o $@ $(LDFLAGS)
 
 bin:
 	mkdir bin
 
 clean:
 	rm -fr bin/ *~
+	
