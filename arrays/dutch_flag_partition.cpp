@@ -20,4 +20,5 @@ void dutch_flag_partition() {
 
 int main() {
   dutch_flag_partition();
+
 }
