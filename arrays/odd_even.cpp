@@ -7,7 +7,6 @@
 
 #include <algorithm>
 #include <vector>
-#include "print.h"
 
 #include "../ihelper.h"
 
@@ -18,7 +17,7 @@ int main() {
     // is even?
     return (e & 1) == 0;
   });
-  print(vi);
+  cprint(vi);
 
   {
     // manual implementation
@@ -37,13 +36,13 @@ int main() {
         even++;
       }
     }
-    print(vi2);
+    cprint(vi2);
   }
   {
     // manual implementatio, another approach
     std::vector<int> vi3 {23, 345, -234, 45, 89, 24};
     //std::vector<int> vi3 {5, 7, 34, 56, 23, 56, 89};
-    print(vi3);
+    cprint(vi3);
     // find the first odd element in the array.
     // this is the place from where even elems have to be populated
     auto even = std::find_if(begin(vi3), end(vi3), [](auto e) {
@@ -65,6 +64,6 @@ int main() {
         even++;
       }
     }
-    print(vi3);
+    cprint(vi3);
   }
 }

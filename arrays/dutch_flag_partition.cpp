@@ -6,7 +6,7 @@
  */
 
 #include "header.h"
-#include "print.h"
+#include "../ihelper.h"
 
 void dutch_flag_partition() {
   vector<int> vi {0, 1, 2, 0, 2, 1, 1};
@@ -15,7 +15,7 @@ void dutch_flag_partition() {
   std::partition(begin(vi), end(vi), [p](int e) {
     return e < p;
   });
-  print(vi);
+  cprint(vi);
 }
 
 int main() {
