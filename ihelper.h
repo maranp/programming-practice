@@ -12,6 +12,9 @@ using std::vector;
 using std::cout;
 using std::endl;
 
+#include <string>
+using std::string;
+
 // print the container
 auto cprint = [](auto const & c) {
   std::for_each(begin(c), end(c), [](auto const &e) {
