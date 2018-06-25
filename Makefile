@@ -11,7 +11,7 @@ TOPTARGETS := all clean
 # either of the below 2 will work
 # SUBDIRS := $(wildcard */)
 # SUBDIRS := $(wildcard */.)
-SUBDIRS := dynamic_programming
+SUBDIRS := cpp-practice
 
 $(TOPTARGETS) : $(SUBDIRS)
 $(SUBDIRS) :
