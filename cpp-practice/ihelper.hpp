@@ -20,3 +20,8 @@ using std::ostream;
 
 #include <string>
 using std::string;
+
+#include <algorithm>
+using std::begin;
+using std::end;
+using std::next;
